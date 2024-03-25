@@ -1,0 +1,26 @@
+import axios from 'axios';
+
+const options = {
+  method: 'GET',
+  url: 'https://api.themoviedb.org/3/discover/movie',
+  params: {
+    include_adult: 'false',
+    include_video: 'false',
+    language: 'en-US',
+    page: '1',
+    sort_by: 'popularity.desc'
+  },
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNmU1NDhiOTk2NjM2ZGRmOTBiYWJjNTVkNDI0ZDYzYyIsInN1YiI6IjYwMDA0NGI1N2Q1ZGI1MDAzZWNhYWNhZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.kd3yo-Hsky3usHgAEo3ena6_bRkaEk6jWYTbaG9JqcE'
+  }
+};
+
+axios
+  .request(options)
+  .then(function (response) {
+    console.log(response.data);
+  })
+  .catch(function (error) {
+    console.error(error);
+  });

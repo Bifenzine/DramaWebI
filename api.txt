@@ -1,0 +1,168 @@
+  useEffect(() => {
+    const options = {
+      method: 'GET',
+      headers: {
+        accept: 'application/json',
+        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNmU1NDhiOTk2NjM2ZGRmOTBiYWJjNTVkNDI0ZDYzYyIsInN1YiI6IjYwMDA0NGI1N2Q1ZGI1MDAzZWNhYWNhZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.kd3yo-Hsky3usHgAEo3ena6_bRkaEk6jWYTbaG9JqcE'
+      }
+    };
+
+    fetch('https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc', options)
+      .then(response => response.json())
+      .then(response => console.log(response.results))
+      .then((response) => {
+        setMoviesList(response.results)
+      }
+
+      .catch(err => console.error(err));
+  }, [])
+
+
+
+////////////////////////////// Titles /////////////////////////////////////////////
+
+
+import axios from 'axios';
+
+const options = {
+  method: 'GET',
+  url: 'https://moviesdatabase.p.rapidapi.com/titles',
+  headers: {
+    'X-RapidAPI-Key': '7d8cad0845msh3b798ee50e3c496p1c99e6jsn52e9dc5482e8',
+    'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
+  }
+};
+
+try {
+	const response = await axios.request(options);
+	console.log(response.data);
+} catch (error) {
+	console.error(error);
+}
+
+
+
+/////////////////////// titles (id) one by one /////////////////
+
+
+import axios from 'axios';
+
+const options = {
+  method: 'GET',
+  url: 'https://moviesdatabase.p.rapidapi.com/titles/%7Bid%7D',
+  headers: {
+    'X-RapidAPI-Key': '7d8cad0845msh3b798ee50e3c496p1c99e6jsn52e9dc5482e8',
+    'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
+  }
+};
+
+try {
+	const response = await axios.request(options);
+	console.log(response.data);
+} catch (error) {
+	console.error(error);
+}
+
+/////////////////////////////titles actors///////////////////////////////////
+
+import axios from 'axios';
+
+const options = {
+  method: 'GET',
+  url: 'https://moviesdatabase.p.rapidapi.com/titles/%7Bid%7D/main_actors',
+  headers: {
+    'X-RapidAPI-Key': '7d8cad0845msh3b798ee50e3c496p1c99e6jsn52e9dc5482e8',
+    'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
+  }
+};
+
+try {
+	const response = await axios.request(options);
+	console.log(response.data);
+} catch (error) {
+	console.error(error);
+}
+
+//////////////////////////titles episode/////////////////////////////////
+
+import axios from 'axios';
+
+const options = {
+  method: 'GET',
+  url: 'https://moviesdatabase.p.rapidapi.com/titles/episode/%7Bid%7D',
+  headers: {
+    'X-RapidAPI-Key': '7d8cad0845msh3b798ee50e3c496p1c99e6jsn52e9dc5482e8',
+    'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
+  }
+};
+
+try {
+	const response = await axios.request(options);
+	console.log(response.data);
+} catch (error) {
+	console.error(error);
+}
+
+/////////////////////titles random references////////////////////////////
+
+import axios from 'axios';
+
+const options = {
+  method: 'GET',
+  url: 'https://moviesdatabase.p.rapidapi.com/titles/random',
+  headers: {
+    'X-RapidAPI-Key': '7d8cad0845msh3b798ee50e3c496p1c99e6jsn52e9dc5482e8',
+    'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
+  }
+};
+
+try {
+	const response = await axios.request(options);
+	console.log(response.data);
+} catch (error) {
+	console.error(error);
+}
+
+///////////////////////////////////series tv///////////////////////////////////////
+
+
+import axios from 'axios';
+
+const options = {
+  method: 'GET',
+  url: 'https://moviesdatabase.p.rapidapi.com/titles/seasons/%7BseriesId%7D',
+  headers: {
+    'X-RapidAPI-Key': '7d8cad0845msh3b798ee50e3c496p1c99e6jsn52e9dc5482e8',
+    'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
+  }
+};
+
+try {
+	const response = await axios.request(options);
+	console.log(response.data);
+} catch (error) {
+	console.error(error);
+}
+
+////////////////////////////titles episode ////////////////////////////////////////
+
+import axios from 'axios';
+
+const options = {
+  method: 'GET',
+  url: 'https://moviesdatabase.p.rapidapi.com/titles/episode/%7Bid%7D',
+  headers: {
+    'X-RapidAPI-Key': '7d8cad0845msh3b798ee50e3c496p1c99e6jsn52e9dc5482e8',
+    'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
+  }
+};
+
+try {
+	const response = await axios.request(options);
+	console.log(response.data);
+} catch (error) {
+	console.error(error);
+}
+
+////////////////////////////////////////////////////////////////////////
+

@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  background-color: rgb(255, 255, 255) !important;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+  color: unset;
+  color: rgb(221, 49, 49);
+  text-decoration: none;
+}
+.shadowbox {
+  box-shadow: 0px 5px 10px rgb(203, 203, 203);
+}
+.Darkbox {
+  box-shadow: 0px 5px 10px rgb(47, 47, 47);
+}
+
+.app {
+  height: 100vh;
+  margin: 0rem 3rem 0rem 6rem;
+  /* border: 1px solid rgb(0, 0, 0); */
+  padding: 2rem 0rem;
+}
+
+/*
+.section__padding{
+  padding: 1rem 1rem;
+
+}
+
+.section__margin{
+  margin: 1rem 1rem;
+}
+*/

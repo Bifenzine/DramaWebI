@@ -25,12 +25,12 @@ const HomePage = () => {
     <>
       <div className="flex justify-center items-center w-full">
         <Tabs
-          className="flex justify-center items-center w-full"
+          className="flex justify-center items-center w-full "
           position="relative"
           variant="soft-rounded"
           colorScheme="gray"
         >
-          <TabList className="gap-4 border-2 border-slate-300 rounded-3xl w-full">
+          <TabList className="gap-4 border-2 border-slate-300 rounded-3xl w-fit flex justify-center items-center">
             <Tab>Series</Tab>
             <Tab>Movies</Tab>
             <Tab>Trending</Tab>

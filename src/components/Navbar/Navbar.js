@@ -19,7 +19,6 @@ const Navbar = () => {
 
         <div className='navbar absolute left-0 right-0 top-0 z-20'>
 
-
             <div className={`sidebar   ${isSidebarOpen ? 'open' : ''}`} >
                 <div className="logo-details">
                     <i className='bx bxl-c-plus-plus icon'></i>
@@ -27,14 +26,7 @@ const Navbar = () => {
                     <i className='bx bx-menu ' onClick={toggleSidebar} id="btn">{isSidebarOpen ? /*<box-icon name='x'></box-icon>*/ <FontAwesomeIcon className='' icon={faClose}></FontAwesomeIcon> : <FontAwesomeIcon className='' icon={faListDots}></FontAwesomeIcon> /*<box-icon name='menu-alt-right'></box-icon>*/}</i>
                 </div>
                 <ul className="nav-list ">
-
-                    <li  >
-                        <a to="/">
-                            <i className='bx bx-grid-alt'>D</i>
-                            <span className="links_name">Dashboard</span>
-                        </a>
-                        <span className="tooltip">Dashboard</span>
-                    </li>
+        
                     <li >
                         <a to="/">
                             <i className='bx bx-user'><FontAwesomeIcon className='' icon={faUser}></FontAwesomeIcon></i>
@@ -44,26 +36,14 @@ const Navbar = () => {
                     </li>
                     <li >
                         <a to="/">
-                            <i className='bx bx-chat'><FontAwesomeIcon className='' icon={faSquarePollHorizontal}></FontAwesomeIcon></i>
+                            <i className='bx bx-chat'>
+                                <FontAwesomeIcon className='' icon={faSquarePollHorizontal}></FontAwesomeIcon>
+                                </i>
                             <span className="links_name">Categories</span>
                         </a>
                         <span className="tooltip">Categories</span>
                     </li>
-                    <li >
-                        <a to="/">
-                            <i className='bx bx-pie-chart-alt-2'>M</i>
-                            <span className="links_name">Analytics</span>
-                        </a>
-                        <span className="tooltip">Analytics</span>
-                    </li>
-
-                    <li >
-                        <a to="/">
-                            <i className='bx bx-cart-alt'></i>
-                            <span className="links_name">Order</span>
-                        </a>
-                        <span className="tooltip">Order</span>
-                    </li>
+                    
                     <li >
                         <a to="/">
                             <i className='bx bx-heart'></i>
